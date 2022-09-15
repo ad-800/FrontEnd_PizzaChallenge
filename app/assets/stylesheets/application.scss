@@ -9,4 +9,33 @@
 
 // Your CSS partials
 @import "components/index";
-@import "pages/index";
+
+h1 {
+  text-align: center;
+}
+h2 {
+  margin: 0;
+}
+#multi-step-form-container {
+  margin-top: 5rem;
+}
+.text-center {
+  text-align: center;
+}
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.button {
+  padding: 0.7rem 1.5rem;
+  border: 1px solid #4361ee;
+  background-color: #4361ee;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.submit-btn {
+  border: 1px solid #0e9594;
+  background-color: #0e9594;
+}
