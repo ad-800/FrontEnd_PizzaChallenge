@@ -1,3 +1,6 @@
-<h1>Time for Pizza</h1>
-<p>Click the button below to make your order</p>
-<%= link_to "Order Now", new_pizza_path %>
+<div class="d-flex justify-content-center align-items-center" style="flex-direction: column; height: 100vh;">
+  <img src="https://cdn-icons-png.flaticon.com/512/2094/2094661.png" alt="pizza", height="200px">
+  <h1 class="m-3">Time for Pizza</h1>
+  <p>Click the button below to make your order</p>
+  <%= link_to "Order Now", new_pizza_path, class: "button submit-btn" %>
+</div>

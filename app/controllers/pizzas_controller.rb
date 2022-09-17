@@ -3,6 +3,16 @@ class PizzasController < ApplicationController
     @pizza = Pizza.find(params[:id])
   end
 
+  def edit
+    @pizza = Pizza.find(params[:id])
+  end
+
+  def update
+    @pizza = Pizza.find(params[:id])
+    @pizza.update(pizza_params)
+    redirect_to pizza_path(@pizza)
+  end
+
   def new
     @pizza = Pizza.new
   end

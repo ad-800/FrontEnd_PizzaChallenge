@@ -1,11 +1,15 @@
-<h1>Confirmation</h1>
-<div>
-  <ul>
-    <li><%= @pizza.style %></li>
-    <li><%= @pizza.dough %></li>
-    <li><%= @pizza.topping.join(', ') %></li>
-  </ul>
-  <%= link_to 'Confirm Order', root_path, class:"button btn-navigate-form-step", onclick:"logorder()" %>
+<div class="d-flex justify-content-center align-items-center" style="flex-direction: column; height: 100vh;">
+  <img src="https://cdn-icons-png.flaticon.com/512/1404/1404945.png" alt="pizza" height="200px">
+  <h1 class="mt-4">Your New Order</h1>
+  <div class="m-2">
+    <ul>
+      <li><%= @pizza.style %></li>
+      <li><%= @pizza.dough %></li>
+      <li><%= @pizza.topping.join(', ') %></li>
+    </ul>
+  </div>
+  <%= link_to 'Confirm', root_path, class:"button btn-navigate-form-step", onclick:"logorder()" %>
+  <%= link_to 'Update', edit_pizza_path, class:"button submit-btn mt-2" %>
 </div>
 
 <script>

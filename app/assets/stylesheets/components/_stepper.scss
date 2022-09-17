@@ -1,10 +1,33 @@
+h1 {
+  text-align: center;
+  font-weight: bold;
+}
+h2 {
+  margin: 0;
+}
+#multi-step-form-container {
+  margin-top: 3rem;
+}
+.text-center {
+  text-align: center;
+}
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+.pl-0 {
+  padding-left: 0;
+}
+.mt-3 {
+  margin-top: 2rem;
+}
 .d-none {
   display: none;
 }
 .form-step {
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 20px;
-  padding: 3rem;
+  padding: 2rem 3rem;
 }
 .font-normal {
   font-weight: normal;
@@ -67,44 +90,48 @@ ul.form-stepper > li:not(:last-of-type) {
   background-color: #dee2e6;
 }
 .form-stepper-horizontal li.form-stepper-completed:after {
-  background-color: #4da3ff;
+  background-color: #FE9812;
 }
 .form-stepper-horizontal li:last-child {
   flex: unset;
 }
 ul.form-stepper li a .form-stepper-circle {
   display: inline-block;
-  width: 40px;
-  height: 40px;
   margin-right: 0;
   line-height: 1.7rem;
   text-align: center;
   background: rgba(0, 0, 0, 0.38);
   border-radius: 50%;
+  height: 75px;
+  width: 75px;
 }
 .form-stepper .form-stepper-active .form-stepper-circle {
-  background-color: #4361ee !important;
+  background-color: #FE5123 !important;
   color: #fff;
+  width: 75px;
+  height: 75px;
 }
 .form-stepper .form-stepper-active .label {
-  color: #4361ee !important;
+  color: #FE5123 !important;
 }
 .form-stepper .form-stepper-active .form-stepper-circle:hover {
-  background-color: #4361ee !important;
+  background-color: #FE5123 !important;
   color: #fff !important;
 }
 .form-stepper .form-stepper-unfinished .form-stepper-circle {
   background-color: #f8f7ff;
 }
 .form-stepper .form-stepper-completed .form-stepper-circle {
-  background-color: #0e9594 !important;
+  background-color: #FE9812 !important;
   color: #fff;
+  height: 75px;
+  width: 75px;
 }
 .form-stepper .form-stepper-completed .label {
-  color: #0e9594 !important;
+  color: #FE9812 !important;
 }
 .form-stepper .form-stepper-completed .form-stepper-circle:hover {
-  background-color: #0e9594 !important;
+  background-color: #FE9812 !important;
   color: #fff !important;
 }
 .form-stepper .form-stepper-active span.text-muted {
@@ -116,7 +143,9 @@ ul.form-stepper li a .form-stepper-circle {
 .form-stepper .label {
   font-size: 1rem;
   margin-top: 0.5rem;
+  text-decoration: none;
 }
 .form-stepper a {
   cursor: default;
+  text-decoration: none;
 }
