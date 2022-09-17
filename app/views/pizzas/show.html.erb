@@ -1,0 +1,15 @@
+<h1>Confirmation</h1>
+<div>
+  <ul>
+    <li><%= @pizza.style %></li>
+    <li><%= @pizza.dough %></li>
+    <li><%= @pizza.topping.join(', ') %></li>
+  </ul>
+  <%= link_to 'Confirm Order', root_path, class:"button btn-navigate-form-step", onclick:"logorder()" %>
+</div>
+
+<script>
+function logorder() {
+  console.log("<%= @pizza.to_json %>")
+}
+</script>

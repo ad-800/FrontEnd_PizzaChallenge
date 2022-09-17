@@ -1,5 +1,6 @@
 class PizzasController < ApplicationController
   def show
+    @pizza = Pizza.find(params[:id])
   end
 
   def new
@@ -7,15 +8,16 @@ class PizzasController < ApplicationController
   end
 
   def create
-    raise
     @pizza = Pizza.new(pizza_params)
+    @pizza.topping.reject! { |c| c.empty? }
     @pizza.save
-    redirect_to confirmation_path(@pizza)
+    redirect_to pizza_path(@pizza)
   end
 
   private
 
   def pizza_params
-    params.require(:pizza).permit(:topping, :dough, :style)
+    params[:pizza][:topping] ||= []
+    params.require(:pizza).permit(:dough, :style, topping: [])
   end
 end
